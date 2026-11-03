@@ -3,7 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portafolio | Francisco Lertora</title>
+  <title>Francisco Lertora | Redes, Cloud y Desarrollo Web</title>
+  <meta name="description" content="Portafolio de Francisco Lertora, estudiante de Ingeniería en Redes e Infraestructura Cloud. Proyectos de redes, desarrollo web y análisis de datos." />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Vista previa al compartir el enlace -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Francisco Lertora | Redes, Cloud y Desarrollo Web" />
+  <meta property="og:description" content="Proyectos de redes, desarrollo web y análisis de datos." />
+  <meta property="og:image" content="https://flertora.github.io/Portafolio.Francisco.Lertora/assets/exportify.png" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%234f46e5'/%3E%3Ctext x='50' y='66' font-size='54' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EFL%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="./styles/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,12 +22,12 @@
 <body>
   <!-- Barra de navegación -->
   <header class="header">
-    <nav class="nav">
+    <nav class="nav" aria-label="Navegación principal">
       <div class="nav__logo">
-        <span>&lt;Francisco Lertora/&gt;</span>
+        <span>Francisco Lertora</span>
       </div>
 
-      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
         ☰
       </button>
 
@@ -27,7 +37,7 @@
         <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
         <li><a href="#contacto" class="nav__link">Contacto</a></li>
         <li>
-          <button class="btn-toggle-theme" id="toggleTheme" aria-label="Cambiar tema">
+          <button class="btn-toggle-theme" id="toggleTheme" aria-label="Cambiar tema claro u oscuro">
             🌓
           </button>
         </li>
@@ -35,70 +45,134 @@
     </nav>
   </header>
 
-  <!-- Sección Hero / Inicio -->
   <main>
+    <!-- Inicio -->
     <section id="inicio" class="hero">
       <div class="hero__content">
-        <p class="hero__tag">Desarrollador Web | Full Stack | Cloud</p>
+        <p class="hero__tag">Redes | Cloud | Desarrollo web</p>
         <h1 class="hero__title">Hola, soy <span>Francisco</span></h1>
         <p class="hero__subtitle">
-          Entre redes, nubes y código: diseño soluciones que funcionan
+          Estudiante de Ingeniería en Redes e Infraestructura Cloud. Configuro redes, trabajo con AWS y construyo aplicaciones web.
         </p>
         <div class="hero__actions">
           <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
           <a href="#contacto" class="btn btn--outline">Contáctame</a>
+          <a href="./assets/CV-Francisco-Lertora.pdf" class="btn btn--outline" download>Descargar CV</a>
         </div>
       </div>
 
-        <div class="hero__avatar">
-          <div class="avatar-circle">
-            <img src="./assets/images.png" alt="Foto de perfil" class ="avatar">
-          </div>
+      <div class="hero__avatar">
+        <div class="avatar-circle">
+          <img src="./assets/images.png" alt="Foto de perfil de Francisco Lertora" class="avatar">
         </div>
-      </section>
+      </div>
+    </section>
 
-    <!-- Sección Sobre mí -->
+    <!-- Sobre mí -->
     <section id="sobre-mi" class="section section--light">
       <div class="container">
         <h2 class="section__title">Sobre mí</h2>
         <p class="section__text">
-            Ingeniero en formación especializado en redes, infraestructura cloud y automatización. Manejo herramientas como Cisco Packet Tracer, AWS y tecnologías de programación para construir soluciones robustas y escalables. Destaco por mi pensamiento analítico, disciplina y orientación al detalle.
+          Estudio Ingeniería en Redes e Infraestructura Cloud en Iplacex. Practico con Cisco Packet Tracer y MikroTik, tengo la certificación AWS Cloud Practitioner y complemento mi perfil con desarrollo web y análisis de datos.
         </p>
+
         <div class="grid-2">
           <div>
             <h3 class="section__subtitle">Habilidades</h3>
+
+            <p class="skills__label">Redes</p>
             <ul class="skills">
+              <li class="skill">Cisco Packet Tracer</li>
+              <li class="skill">MikroTik</li>
+              <li class="skill">Linux</li>
+            </ul>
+
+            <p class="skills__label">Cloud</p>
+            <ul class="skills">
+              <li class="skill">AWS</li>
+              <li class="skill">EC2</li>
+              <li class="skill">S3</li>
+              <li class="skill">IAM</li>
+              <li class="skill">VPC</li>
+              <li class="skill">Lambda</li>
+              <li class="skill">RDS</li>
+              <li class="skill">Route 53</li>
+              <li class="skill">CloudFormation</li>
+            </ul>
+
+            <p class="skills__label">Desarrollo</p>
+            <ul class="skills">
+              <li class="skill">Java</li>
+              <li class="skill">Spring Boot</li>
+              <li class="skill">Python</li>
               <li class="skill">HTML5</li>
               <li class="skill">CSS3</li>
               <li class="skill">JavaScript</li>
-              <li class="skill">Excel</li>
               <li class="skill">MySQL</li>
-              <li class="skill">Git & GitHub</li>
-              <li class="skill">Cloud / DevOps </li>
+              <li class="skill">Git y GitHub</li>
+            </ul>
+
+            <p class="skills__label">Datos</p>
+            <ul class="skills">
+              <li class="skill">Power BI</li>
+              <li class="skill">DAX</li>
+              <li class="skill">Excel</li>
+              <li class="skill">Power Query</li>
+              <li class="skill">VBA</li>
             </ul>
           </div>
 
           <div>
-            <h3 class="section__subtitle">Experiencia</h3>
+            <h3 class="section__subtitle">Formación y certificaciones</h3>
             <div class="timeline">
               <article class="timeline__item">
-                <h4>Bootcamp Excel Básico intermedio y avanzado</h4>
-                <span class="timeline__date">2023 - 2024</span>
+                <h4>Ingeniería en Redes e Infraestructura Cloud</h4>
+                <span class="timeline__date">Iplacex · 2024 - Presente</span>
                 <p>
-                  Completé 3 cursos de 60 horas en Excel adquiriendo dominio en tablas dinámicas, validación de datos, macros, VBA, Power Pivot y Power Query
-                </p>
-                <article class="timeline__item">
-                <h4>Bootcamp AWS Re/start </h4>
-                <span class="timeline__date">2022 - 2025</span>
-                <p>
-                  Desarrollo de habilidades en AWS obteniendo la certificación de Cloud Practitioner.
+                  Estudios orientados a infraestructura de redes, servicios cloud y administración de sistemas.
                 </p>
               </article>
+
               <article class="timeline__item">
-                <h4>Bootcamp full stack Java</h4>
-                <span class="timeline__date">2025 - 2026</span>
+                <h4>Bootcamp Full Stack Java</h4>
+                <span class="timeline__date">Generation Chile · 2025 - 2026</span>
                 <p>
-                  Formación intensiva en desarrollo con Java full stack, buenas prácticas y trabajo en equipo
+                  Formación práctica en Java, Spring Boot, MySQL, HTML, CSS, JavaScript, Linux y Python, trabajando en equipo.
+                </p>
+              </article>
+
+              <article class="timeline__item">
+                <h4>Bootcamp Excel: básico, intermedio y avanzado</h4>
+                <span class="timeline__date">Julio 2023 - Octubre 2024</span>
+                <p>
+                  Tres cursos de 60 horas: tablas dinámicas, macros, VBA, Power Pivot y Power Query.
+                </p>
+              </article>
+
+              <article class="timeline__item">
+                <h4>Bootcamp AWS · Certificación Cloud Practitioner</h4>
+                <span class="timeline__date">Fundación Forge · Febrero - Julio 2022</span>
+                <p>
+                  Capacitación en EC2, S3, IAM, VPC, Lambda, RDS, Route 53 y CloudFormation.
+                </p>
+              </article>
+            </div>
+
+            <h3 class="section__subtitle section__subtitle--spaced">Experiencia laboral</h3>
+            <div class="timeline">
+              <article class="timeline__item">
+                <h4>Vendedor retail · Tricot Los Dominicos</h4>
+                <span class="timeline__date">Enero - Septiembre 2025</span>
+                <p>
+                  Uso de sistemas POS, gestión de inventario, validación de datos y atención al cliente.
+                </p>
+              </article>
+
+              <article class="timeline__item">
+                <h4>Vendedor retail · Ripley Curicó</h4>
+                <span class="timeline__date">Febrero - Octubre 2024</span>
+                <p>
+                  Atención al cliente, apertura de tarjetas, manejo de caja y cumplimiento de metas semanales.
                 </p>
               </article>
             </div>
@@ -107,127 +181,128 @@
       </div>
     </section>
 
-    <!-- Sección Proyectos -->
+    <!-- Proyectos -->
     <section id="proyectos" class="section">
       <div class="container">
         <div class="section__header">
           <h2 class="section__title">Proyectos</h2>
           <p class="section__text">
-            Algunos de los proyectos en los que he trabajado recientemente.
+            Una prueba de redes, una aplicación web y un dashboard de datos.
           </p>
         </div>
 
-        <!-- Filtro simple (solo visual, JS puede usarse para mejorarlo) -->
-        <div class="projects-filter">
+        <div class="projects-filter" role="group" aria-label="Filtrar proyectos">
           <button class="filter-btn active" data-filter="all">Todos</button>
-          <button class="filter-btn" data-filter="front">Frontend</button>
-          <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+          <button class="filter-btn" data-filter="redes">Redes</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="datos">Datos</button>
         </div>
 
         <div class="projects-grid" id="projectsGrid">
-          <!-- Card 1 -->
-          <article class="project-card" data-category="front">
-            <h3 class="project-card__title">Exportify</h3>
-            <p class="project-card__description">
-            Exportify es una plataforma digital diseñada para facilitar y optimizar el proceso de exportación de productos creados por mujeres emprendedoras de Chile que buscan llevar sus negocios al siguiente nivel.
-            </p>
-            <ul class="project-card__tags">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>Bootstrap</li>
-            </ul>
-            <div class="project-card__links">
-              <a href="https://exportify-bay.vercel.app/" target="_blank">Ver demo</a>
-              <a href="https://github.com/Made-cloud/Proyecto-Integrador-Front-Loopers.git" target="_blank">Código</a>
+          <!-- Proyecto 1: MikroTik -->
+          <article class="project-card" data-category="redes">
+            <img class="project-card__img" src="./assets/router-generico.svg" alt="Ilustración genérica de un router (imagen provisoria)" loading="lazy" />
+            <div class="project-card__body">
+              <h3 class="project-card__title">
+                Proyecto MikroTik
+                <span class="badge">En desarrollo</span>
+              </h3>
+              <p class="project-card__description">
+                Prueba de redes con un router MikroTik. Estoy trabajando en este proyecto; pronto agregaré la configuración, el esquema de red y las capturas.
+              </p>
+              <ul class="project-card__tags">
+                <li>MikroTik</li>
+                <li>Redes</li>
+              </ul>
+              <div class="project-card__links">
+                <span class="project-card__soon">Documentación próximamente</span>
+              </div>
             </div>
           </article>
 
-          <!-- Card 2 -->
-          <article class="project-card" data-category="fullstack">
-            <h3 class="project-card__title">Dashboard de ventas</h3>
-            <p class="project-card__description">
-              Dashboard comercial en Power BI para análisis de pipeline de ventas, conversión e ingresos por canal. Además de ser interactivo para visualizar métricas de negocio en tiempo real.
-            </p>
-            <ul class="project-card__tags">
-              <li>DAX</li>
-              <li>Power BI</li>
-              <li>KPIs</li>
-              <li>Excel</li>
-            </ul>
-            <div class="project-card__links">
-              <a href="https://github.com/FLertora/dashboard-powerbi.git" target="_blank">Código</a>
+          <!-- Proyecto 2: Exportify -->
+          <article class="project-card" data-category="web">
+            <img class="project-card__img" src="./assets/exportify.png" alt="Página de inicio de Exportify con el mensaje 'Vende tus productos al mundo'" loading="lazy" />
+            <div class="project-card__body">
+              <h3 class="project-card__title">Exportify</h3>
+              <p class="project-card__description">
+                Plataforma digital para facilitar la exportación de productos creados por mujeres emprendedoras de Chile. Proyecto integrador desarrollado en equipo.
+              </p>
+              <ul class="project-card__tags">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>Bootstrap</li>
+              </ul>
+              <div class="project-card__links">
+                <a href="https://proyecto-integrador-front-loopers.vercel.app/" target="_blank" rel="noopener noreferrer">Ver demo</a>
+                <a href="https://github.com/ochv-dev/Proyecto-Integrador-Front-Loopers" target="_blank" rel="noopener noreferrer">Código</a>
+              </div>
             </div>
           </article>
 
-          <!-- Card 3 -->
-          <article class="project-card" data-category="front">
-            <h3 class="project-card__title">ABBA Music Analytics Dashboard</h3>
-            <p class="project-card__description">
-              Dashboard interactivo desarrollado en Power BI para analizar la evolución musical de ABBA.
-Incluye métricas clave como cantidad de canciones por año, distribución por década y tendencias temporales.
-            </p>
-            <ul class="project-card__tags">
-              <li>Data Analysis</li>
-              <li>DAX</li>
-              <li>Power BI</li>
-              <li>Excel</li>
-            </ul>
-            <div class="project-card__links">
-              <a href="https://github.com/FLertora/ABBA_Songs_Dashboard.git" target="_blank">Código</a>
+          <!-- Proyecto 3: ABBA -->
+          <article class="project-card" data-category="datos">
+            <img class="project-card__img" src="./assets/abba.png" alt="Dashboard de Power BI con el análisis temporal de canciones de ABBA" loading="lazy" />
+            <div class="project-card__body">
+              <h3 class="project-card__title">ABBA Music Analytics Dashboard</h3>
+              <p class="project-card__description">
+                Dashboard en Power BI sobre la discografía de ABBA entre 1973 y 2021: 109 canciones y 9 álbumes, con filtro por año, evolución anual y distribución por década.
+              </p>
+              <ul class="project-card__tags">
+                <li>Power BI</li>
+                <li>DAX</li>
+                <li>Excel</li>
+                <li>Análisis de datos</li>
+              </ul>
+              <div class="project-card__links">
+                <a href="https://github.com/FLertora/ABBA_Songs_Dashboard" target="_blank" rel="noopener noreferrer">Código</a>
+              </div>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Sección Contacto -->
-    
+    <!-- Contacto -->
     <section id="contacto" class="section section--light">
-  <div class="container">
-    <h2 class="section__title">Contacto</h2>
-    <p class="section__text">
-      ¿Tienes una idea o proyecto en mente? Hablemos.
-    </p>
+      <div class="container">
+        <h2 class="section__title">Contacto</h2>
+        <p class="section__text">
+          ¿Tienes una oportunidad o un proyecto en mente? Escríbeme.
+        </p>
 
-    <div class="grid-2">
-      <div>
-        <!-- FORMULARIO CON FORMSPREE -->
-        <form class="contact-form" id="contactForm" method="POST" action="https://formspree.io/f/mvgevrle">
-          
-          <div class="form-group">
-            <label for="name">Nombre</label>
-            <input type="text" id="name" name="name" placeholder="Tu nombre" required />
+        <div class="grid-2">
+          <div>
+            <form class="contact-form" id="contactForm" method="POST" action="https://formspree.io/f/mvgevrle">
+              <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" autocomplete="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Correo</label>
+                <input type="email" id="email" name="email" placeholder="tunombre@correo.com" autocomplete="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" rows="4" placeholder="Cuéntame en qué puedo ayudarte" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+              <p class="form__msg" id="formMsg" role="status" aria-live="polite"></p>
+            </form>
           </div>
-
-          <div class="form-group">
-            <label for="email">Correo</label>
-            <input type="email" id="email" name="email" placeholder="tunombre@correo.com" required />
-          </div>
-
-          <div class="form-group">
-            <label for="message">Mensaje</label>
-            <textarea id="message" name="message" rows="4" placeholder="Cuéntame sobre tu proyecto" required></textarea>
-          </div>
-
-          <button type="submit" class="btn btn--primary">Enviar mensaje</button>
-
-          <!-- Mensaje dinámico -->
-          <p class="form__msg" id="formMsg"></p>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
 
           <div>
             <h3 class="section__subtitle">O si prefieres:</h3>
             <ul class="contact-info">
-              <li><strong>Correo:</strong> lertorafrancisco04@gmail.com</li>
-              <li><strong>Ubicación:</strong> Santiago, Chile</li>
-              <li><strong>LinkedIn:</strong> <a href="#" target="_blank">https://www.linkedin.com/in/franciscolertora/</a></li>
-              <li><strong>GitHub:</strong> <a href="#" target="_blank">https://github.com/FLertora</a></li>
+              <li><strong>Correo:</strong> <a href="mailto:lertorafrancisco04@gmail.com">lertorafrancisco04@gmail.com</a></li>
+              <li><strong>Ubicación:</strong> Curicó, Chile</li>
+              <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/franciscolertora/" target="_blank" rel="noopener noreferrer">linkedin.com/in/franciscolertora</a></li>
+              <li><strong>GitHub:</strong> <a href="https://github.com/FLertora" target="_blank" rel="noopener noreferrer">github.com/FLertora</a></li>
             </ul>
           </div>
         </div>
@@ -235,7 +310,6 @@ Incluye métricas clave como cantidad de canciones por año, distribución por d
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <p>© <span id="year"></span> Francisco Lertora. Todos los derechos reservados.</p>
   </footer>
